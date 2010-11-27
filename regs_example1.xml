@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Set of modules and their registers  -->
+<registers>
+
+<!-- Module MOD_1  -->
+<module name="MOD_1" label="Module #1">
+
+  <!-- Register REG_1  -->
+  <register name="REG_1" size="32" addr="0x10001000">
+     <field name="FIELD_1" offset="31" size="1"/>
+     <field name="FIELD_2" offset="29" size="1"/>
+     <field name="FIELD_3" offset="28" size="1"/>
+  </register>
+
+  <!-- Register REG_2  -->
+  <register name="REG_2" size="32" addr="0x10002000">
+     <field name="FIELD_1" offset="15" size="1"/>
+     <field name="FIELD_2" offset="14" size="1"/>
+     <field name="FIELD_3" offset="13" size="1"/>
+     <field name="FIELD_4" offset="12" size="1"/>
+     <field name="FIELD_5" offset="3" size="1"/>
+     <field name="FIELD_6" offset="2" size="1"/>
+     <field name="FIELD_7" offset="1" size="1"/>
+     <field name="FIELD_8" offset="0" size="1"/>
+  </register>
+
+  <!-- Register REG_3  -->
+  <register name="REG_3" size="32" addr="0x10003000">
+     <field name="FIELD_1" offset="0" size="1"/>
+  </register>
+
+  <!-- Register REG_4  -->
+  <register name="REG_4" size="32" addr="0x10004000">
+     <field name="FIELD_1" offset="31" size="1"/>
+     <field name="FIELD_2" offset="24" size="3" label="bitmap">
+        <label mask="4" info="Bit 2"/>
+        <label mask="2" info="Bit 1"/>
+        <label mask="1" info="Bit 0"/>
+     </field>
+     <field name="FIELD_3" offset="0" size="2"/>
+  </register>
+
+  <!-- Register REG_5  -->
+  <register name="REG_5" size="32" addr="Memory">
+     <field name="FIELD_1" offset="31" size="1"/>
+     <field name="FIELD_2" offset="3" size="2" label="value">
+        <label value="0" info="Disabled"/>
+        <label value="1" info="Fetched from memory"/>
+        <label value="2" info="Reserved"/>
+        <label value="3" info="Reserved"/>
+     </field>
+  </register>
+
+</module>
+
+</registers>

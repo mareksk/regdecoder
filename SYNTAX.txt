@@ -1,0 +1,32 @@
+
+The regs_*.xml file syntax is very simple.
+
+Elements:
+    <registers></registers> - represents a set of modules
+
+    <module></module> - a single module that includes a number of register items
+        (e.g. MMU, RTC, UART, etc.)
+
+    <register></register> - a single register that includes a number of field items
+    Attributes:
+        - name - name
+        - size - size in bits
+        - addr - address (or description if register is located at fixed address)
+
+    <field></field> - a set of bits of a register that represent a n-bit value
+    Attributes:
+        - name - name
+        - offset - offset in bits
+        - size - a number of bits occupied in the register by this field
+        - label - type of label mapping
+        - bitmap - each bit of field is mapped to labels separatelly
+        - value  - all bits of field represent a value mapped to a label
+
+    The field element may also include a number of labels:
+    <label></label>
+    Attributes:
+        - value - a value that match with evaluated value of field
+        - info - a text
+
+
+See 'regs_example1.xml' file for more details.
